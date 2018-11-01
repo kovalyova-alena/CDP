@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row mb-3">
+    <div class="col-8">
+      <app-search-course></app-search-course>
+    </div>
+    <div class="col-4 text-right">
+      <button pButton type="submit" label="Add Course" class="ui-button-raised" (click)="onGoToCreateCourse()"></button>
+    </div>
+  </div>
+
+  <ul class="list list-unstyled">
+    <li *ngFor="let course of courses" class="course-item">
+      {{course.title}}
+      <app-course-item [course] = course></app-course-item>
+    </li>
+  </ul>
+</div>

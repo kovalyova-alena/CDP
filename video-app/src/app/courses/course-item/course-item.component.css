@@ -1,0 +1,18 @@
+.course-title {
+  color: #a335dc;
+}
+
+.course-duration {
+  font-size: 18px;
+}
+
+.course-button {
+  background-color: #7f14b7;
+  border: none;
+}
+
+.course-content .course-button:hover,
+.course-content .course-button:active {
+  background: #a335dc;
+}
+

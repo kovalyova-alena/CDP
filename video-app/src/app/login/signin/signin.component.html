@@ -1,0 +1,28 @@
+<div class="col-10 col-sm-3 mr-auto ml-auto">
+  <p class="alert alert-dark">
+    E-mail: test123@mail.com<br />
+    Password: test123
+  </p>
+  <p *ngIf="message" class="alert-message  alert alert-danger">{{message}}</p>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="d-block">E-mail: </label>
+      <input class="form-control" name="email" formControlName="email" [ngClass]="{ 'invalid-field': f.email.touched && f.email.errors }">
+      <div *ngIf="f.email.touched && f.email.errors" class="invalid-message">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="d-block">Password: </label>
+      <input class="form-control" formControlName="password" [ngClass]="{ 'invalid-field': f.password.touched && f.password.errors }">
+      <div *ngIf="f.password.touched && f.password.errors" class="invalid-message">
+        <div *ngIf="f.password.errors.required">Password is required</div>
+        <div *ngIf="f.password.errors.pattern">Password must be a combination of letters and digits</div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-dark">
+      Login
+    </button>
+  </form>
+</div>

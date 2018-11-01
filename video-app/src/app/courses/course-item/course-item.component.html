@@ -1,0 +1,14 @@
+<div class="row course-content">
+  <div class="col-9">
+    <div class="row">
+      <div class="col-5"><h4 class="course-title">{{course.title}}</h4></div>
+      <div class="col-3 course-duration">{{course.duration}}</div>
+      <div class="col-3 text-right">{{course.date}}</div>
+      <div class="col">{{course.description}}</div>
+    </div>
+  </div>
+  <div class="col-3">
+    <button pButton type="button" label="Edit" class="w-100 ui-button-raised course-button"></button>
+    <button pButton type="button" label="Delete" class="w-100 mt-2 ui-button-raised course-button" (click)="delete(course)"></button>
+  </div>
+</div>

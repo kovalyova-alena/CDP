@@ -1,0 +1,12 @@
+header {
+  background: #333;
+}
+
+.text-in-header {
+  color: #ccc;
+}
+
+header .link-in-header {
+  color: #a335dc;
+  cursor: pointer;
+}

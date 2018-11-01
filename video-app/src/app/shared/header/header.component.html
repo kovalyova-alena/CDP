@@ -1,0 +1,16 @@
+<header class="pt-3 pb-3">
+  <div class="container d-flex flex-row">
+    <div class="col-3">
+      <a href="/">
+        <img src="assets/img/Logo.png" alt="logo" class="w-50">
+      </a>
+    </div>
+    <div class="col-7" *ngIf="isLoggedUser">
+      Breadcrumbs
+    </div>
+    <div class="col-2 text-right" *ngIf="isLoggedUser">
+      <p class="text-in-header mb-0">{{currentUser.email}}</p>
+      <p class=" mb-0"><a class="link-in-header font-weight-bold" (click)="onLogout()">LogOut</a></p>
+    </div>
+  </div>
+</header>

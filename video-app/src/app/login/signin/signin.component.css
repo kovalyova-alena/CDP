@@ -1,0 +1,13 @@
+.invalid-message {
+  color: #a335dc;
+}
+
+.invalid-field {
+  border-color: #a335dc;
+}
+
+.alert-message {
+  background: #a335dc;
+  border-color: #333333;
+  color: #fff;
+}
